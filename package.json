@@ -1,0 +1,24 @@
+{
+  "name": "steadfast-sphere",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.2",
+    "astro": "^4.13.3",
+    "typescript": "^5.5.4"
+  },
+  "description": "```sh npm create astro@latest -- --template basics ```",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/node": "^22.14.1"
+  },
+  "author": "",
+  "license": "ISC"
+}

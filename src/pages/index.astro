@@ -1,0 +1,181 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+
+// Simulación de datos dinámicos (puedes conectar a una API real luego)
+const aiTools = [
+ 
+  {
+    href: 'https://runwayml.com',
+    title: 'Runway ML',
+    body: 'Herramienta de IA para creación de video y contenido visual con modelos generativos.',
+    image: '/images/runway.png'
+  },
+  {
+    href: 'https://www.copy.ai',
+    title: 'Copy.ai',
+    body: 'Generador de contenido publicitario y marketing con IA.',
+    image: '/images/copyai.png'
+  },
+  
+  {
+    href: 'https://lumen5.com',
+    title: 'Lumen5',
+    body: 'Plataforma para crear videos automáticamente a partir de texto utilizando IA.',
+    image: '/images/lumen5.png'
+  },
+  {
+    href: 'https://jasper.ai',
+    title: 'Jasper.ai',
+    body: 'Plataforma de redacción automática para marketing y contenidos.',
+    image: '/images/jasper.png'
+  },
+   {
+    href: 'https://zapier.com',
+    title: 'Zapier',
+    body: 'Automatiza tareas entre diferentes aplicaciones web sin necesidad de programación, mejorando la productividad.',
+    image: '/images/zapier.png'
+  },
+  {
+    href: 'https://www.descript.com',
+    title: 'Descript',
+    body: 'Herramienta de edición de audio y video con IA para transcripción y edición.',
+    image: '/images/descript.png'
+  },
+  {
+    href: 'https://www.synthesia.io',
+    title: 'Synthesia',
+    body: 'Generación de videos con avatares IA para presentaciones y contenido visual.',
+    image: '/images/synthesia.png'
+  },
+  {
+    href: 'https://www.grammarly.com',
+    title: 'Grammarly',
+    body: 'Asistente de escritura con IA que corrige gramática, estilo y tono.',
+    image: '/images/grammarly.png'
+  },
+  {
+    href: 'https://piktochart.com',
+    title: 'Piktochart',
+    body: 'Plataforma de diseño para crear infografías con soporte de IA.',
+    image: '/images/piktochart.png'
+  },
+  {
+    href: 'https://lattice.com',
+    title: 'Lattice',
+    body: 'Plataforma de IA para la gestión de talento y desempeño empresarial.',
+    image: '/images/lattice.png'
+  },
+  {
+    href: 'https://www.frase.io',
+    title: 'Frase.io',
+    body: 'Generador de contenido SEO con IA, optimiza artículos y búsquedas.',
+    image: '/images/frase.png'
+  },
+  {
+    href: 'https://www.veed.io',
+    title: 'Veed.io',
+    body: 'Plataforma de edición de video con funciones impulsadas por IA para subtítulos automáticos.',
+    image: '/images/veed.png'
+  },
+  {
+    href: 'https://www.hyperscience.com',
+    title: 'HyperScience',
+    body: 'Automatización de tareas documentales con IA, enfocada en digitalización de procesos.',
+    image: '/images/hyperscience.png'
+  },
+  {
+    href: 'https://clearbit.com',
+    title: 'Clearbit',
+    body: 'Herramienta de IA para la recolección y análisis de datos de clientes y prospects.',
+    image: '/images/clearbit.png'
+  },
+  {
+    href: 'https://fathomanalytics.com',
+    title: 'Fathom Analytics',
+    body: 'Plataforma de análisis web con enfoque en privacidad y automatización de informes con IA.',
+    image: '/images/fathom.png'
+  },
+  {
+    href: 'https://copysmith.ai',
+    title: 'CopySmith',
+    body: 'Generador de copias publicitarias con IA, ideal para marketing digital.',
+    image: '/images/copysmith.png'
+  },
+  {
+    href: 'https://www.aidungeon.io',
+    title: 'AI Dungeon',
+    body: 'Plataforma de narrativa interactiva generada por IA para crear historias personalizadas.',
+    image: '/images/aidungeon.png'
+  },
+  {
+    href: 'https://neuroflash.com',
+    title: 'Neuroflash',
+    body: 'Herramienta de IA para generación de contenido en marketing y anuncios.',
+    image: '/images/neuroflash.png'
+  },
+ 
+];
+---
+
+<Layout title="Explora Herramientas de IA">
+  <main>
+    <h1>🛠️ Herramientas de IA Recomendadas</h1>
+    <h3>Explora soluciones inteligentes para tu día a día</h3>
+    
+    <div class="card-grid">
+      {aiTools.map(tool => (
+        <Card href={tool.href} title={tool.title} body={tool.body} image={tool.image} />
+      ))}
+    </div>
+  </main>
+</Layout>
+
+<style>
+  /* Reutilizamos el estilo original y lo ajustamos un poco si quieres */
+  :root {
+    --primary-color: #fff;
+    --background-color: #13151a;
+    --accent-color: #f33939;
+    --accent-light: #a1a099;
+    --accent-dark: #310a65;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 90%;
+    max-width: 1000px;
+    color: var(--primary-color);
+    font-family: var(--font-family);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    background: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--accent-color);
+    margin-bottom: 1em;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    color: var(--accent-light);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+</style>
+
